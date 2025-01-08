@@ -1,0 +1,21 @@
+/*
+ * Copyright 2023-2025 Logan Magee
+ *
+ * SPDX-License-Identifier: AGPL-3.0-only
+ */
+
+#toolbar {
+    height: 10vh;
+}
+
+#main {
+    min-height: 90vh;
+}
+
+mat-sidenav-content {
+    padding: 2rem;
+}
+
+.spacer {
+    flex: auto;
+}

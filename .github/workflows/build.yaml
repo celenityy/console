@@ -1,0 +1,15 @@
+# Copyright 2023 Logan Magee
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install -g @angular/cli && npm ci && ng build
+      - run: ng lint
