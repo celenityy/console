@@ -10,7 +10,7 @@ import { App } from '../app';
 import { Update } from '../update';
 
 @Component({
-    selector: 'app-update-submission-dialog',
+    selector: 'acc-update-submission-dialog',
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './update-submission-dialog.component.html',
     styleUrl: './update-submission-dialog.component.scss'

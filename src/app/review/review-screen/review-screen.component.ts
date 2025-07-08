@@ -19,7 +19,7 @@ import { Update } from '../../update';
 import { UpdateService } from '../update.service';
 
 @Component({
-    selector: 'app-review-screen',
+    selector: 'acc-review-screen',
     imports: [
         MatDialogModule,
         ReviewerDraftCardComponent,

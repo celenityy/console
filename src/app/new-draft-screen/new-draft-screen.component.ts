@@ -17,7 +17,7 @@ import { NewDraftEditorComponent } from '../new-draft-editor/new-draft-editor.co
 import { NewDraftForm } from '../new-draft-form';
 
 @Component({
-    selector: 'app-new-draft-screen',
+    selector: 'acc-new-draft-screen',
     imports: [MatDialogModule, MatProgressBarModule, NewDraftEditorComponent],
     templateUrl: './new-draft-screen.component.html',
 })

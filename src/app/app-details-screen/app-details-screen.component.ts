@@ -39,7 +39,7 @@ import {
 } from '../update-submission-dialog/update-submission-dialog.component';
 
 @Component({
-    selector: 'app-app-details-screen',
+    selector: 'acc-app-details-screen',
     imports: [
         EditCardComponent,
         EditFilterPipe,

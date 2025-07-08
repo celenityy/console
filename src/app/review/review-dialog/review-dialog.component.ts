@@ -10,7 +10,7 @@ import { Review } from '../review';
 import { ReviewEditorComponent } from '../review-editor/review-editor.component';
 
 @Component({
-    selector: 'app-review-dialog',
+    selector: 'acc-review-dialog',
     imports: [MatButtonModule, MatDialogModule, ReviewEditorComponent],
     templateUrl: './review-dialog.component.html',
 })

@@ -31,13 +31,13 @@ export default [{
     rules: {
         "@angular-eslint/directive-selector": ["error", {
             type: "attribute",
-            prefix: "app",
+            prefix: "acc",
             style: "camelCase",
         }],
 
         "@angular-eslint/component-selector": ["error", {
             type: "element",
-            prefix: "app",
+            prefix: "acc",
             style: "kebab-case",
         }],
 

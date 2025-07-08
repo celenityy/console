@@ -10,7 +10,7 @@ import { Draft } from '../../draft';
 import { environment } from '../../../environments/environment';
 
 @Component({
-    selector: 'app-publisher-draft-card',
+    selector: 'acc-publisher-draft-card',
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './publisher-draft-card.component.html',
 })

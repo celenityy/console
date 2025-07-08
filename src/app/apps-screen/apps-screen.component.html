@@ -17,7 +17,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 <h2 class="section-header">Apps</h2>
 <div class="grid-container">
     @for (app of apps; track app) {
-        <app-app-card [app]="app"/>
+        <acc-app-card [app]="app"/>
     } @empty {
         <p>No published apps</p>
     }
@@ -26,7 +26,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 <h2 class="section-header">Drafts</h2>
 <div class="grid-container">
     @for (draft of drafts; track draft) {
-        <app-draft-card
+        <acc-draft-card
             [draft]="draft"
             (delete)="deleteDraft($event)"
             (submitForReview)="submitDraft($event)"/>

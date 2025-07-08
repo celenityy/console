@@ -10,7 +10,7 @@ import { Update } from '../../update';
 import { environment } from '../../../environments/environment';
 
 @Component({
-    selector: 'app-reviewer-update-card',
+    selector: 'acc-reviewer-update-card',
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './reviewer-update-card.component.html',
 })

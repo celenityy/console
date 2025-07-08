@@ -14,7 +14,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { Review, ReviewResult } from '../review';
 
 @Component({
-    selector: 'app-review-editor',
+    selector: 'acc-review-editor',
     imports: [
         MatButtonModule,
         MatCardModule,

@@ -13,7 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-    selector: 'app-console-layout',
+    selector: 'acc-console-layout',
     templateUrl: './console-layout.component.html',
     styleUrl: './console-layout.component.scss',
     imports: [

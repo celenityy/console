@@ -4,7 +4,7 @@
 
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppDetailsScreenComponent } from './app-details-screen.component';
+import { AppDetailsScreenComponent } from './acc-details-screen.component';
 
 describe('AppDetailsScreenComponent', () => {
     let component: AppDetailsScreenComponent;

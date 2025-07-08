@@ -13,7 +13,7 @@ import { atLeastOne } from '../at-least-one.validator';
 import { NewEditForm } from '../new-edit-form';
 
 @Component({
-    selector: 'app-new-edit-editor',
+    selector: 'acc-new-edit-editor',
     imports: [
         MatButtonModule,
         MatCardModule,

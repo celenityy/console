@@ -10,7 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { NewUpdateForm } from '../new-update-form';
 
 @Component({
-    selector: 'app-new-update-editor',
+    selector: 'acc-new-update-editor',
     imports: [MatButtonModule, MatCardModule, ReactiveFormsModule],
     templateUrl: './new-update-editor.component.html',
     styleUrl: './new-update-editor.component.scss'

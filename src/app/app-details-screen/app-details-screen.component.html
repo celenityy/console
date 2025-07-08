@@ -24,15 +24,15 @@ SPDX-License-Identifier: AGPL-3.0-only
 <mat-divider/>
 
 <div class="grid-forms">
-    <app-new-update-editor (formSubmit)="createUpdate($event)">
+    <acc-new-update-editor (formSubmit)="createUpdate($event)">
         @if (uploadProgress !== undefined) {
             <mat-progress-bar [value]="uploadProgress"/>
         } @else if (submitDisabled) {
             <mat-progress-bar mode="indeterminate"/>
         }
-    </app-new-update-editor>
+    </acc-new-update-editor>
 
-    <app-new-edit-editor (formSubmit)="createEdit($event)"/>
+    <acc-new-edit-editor (formSubmit)="createEdit($event)"/>
 </div>
 
 <mat-divider/>
@@ -54,7 +54,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 </mat-chip-listbox>
 <div class="grid-cards">
     @for (update of updates | updateFilter : showRejectedUpdates : showPublishedUpdates; track update) {
-        <app-update-card
+        <acc-update-card
             [update]="update"
             (delete)="deleteUpdate($event)"
             (submitForReview)="submitUpdate($event)"/>
@@ -82,7 +82,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 </mat-chip-listbox>
 <div class="grid-cards">
     @for (edit of edits | editFilter : showRejectedEdits : showPublishedEdits; track edit) {
-<app-edit-card
+<acc-edit-card
        
         [edit]="edit"
         (delete)="deleteEdit($event)"

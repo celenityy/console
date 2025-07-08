@@ -9,7 +9,7 @@ import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Draft } from '../draft';
 
 @Component({
-    selector: 'app-draft-deletion-dialog',
+    selector: 'acc-draft-deletion-dialog',
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './draft-deletion-dialog.component.html',
     styleUrl: './draft-deletion-dialog.component.scss'

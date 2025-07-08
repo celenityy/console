@@ -9,7 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { Edit, EditStatus } from '../edit';
 
 @Component({
-    selector: 'app-edit-card',
+    selector: 'acc-edit-card',
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './edit-card.component.html',
 })

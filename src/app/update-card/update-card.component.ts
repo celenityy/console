@@ -9,7 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { Update, UpdateStatus } from '../update';
 
 @Component({
-    selector: 'app-update-card',
+    selector: 'acc-update-card',
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './update-card.component.html',
 })

@@ -12,7 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { NewDraftForm } from '../new-draft-form';
 
 @Component({
-    selector: 'app-new-draft-editor',
+    selector: 'acc-new-draft-editor',
     imports: [
         MatButtonModule,
         MatCardModule,

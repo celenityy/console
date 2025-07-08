@@ -12,7 +12,7 @@ import {
 } from '../publisher-draft-card/publisher-draft-card.component';
 
 @Component({
-    selector: 'app-publish-screen',
+    selector: 'acc-publish-screen',
     imports: [PublisherDraftCardComponent],
     templateUrl: './publish-screen.component.html',
     styleUrl: './publish-screen.component.scss'

@@ -9,7 +9,7 @@ import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Draft } from '../draft';
 
 @Component({
-    selector: 'app-draft-submission-dialog',
+    selector: 'acc-draft-submission-dialog',
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './draft-submission-dialog.component.html',
     styleUrl: './draft-submission-dialog.component.scss'

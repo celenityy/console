@@ -19,7 +19,7 @@ import {
 import { DraftService } from '../draft.service';
 
 @Component({
-    selector: 'app-apps-screen',
+    selector: 'acc-apps-screen',
     imports: [
         AppCardComponent,
         DraftCardComponent,

@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
 import { App } from '../app';
 
 @Component({
-    selector: 'app-app-card',
+    selector: 'acc-app-card',
     imports: [MatButtonModule, MatCardModule, RouterLink],
     templateUrl: './app-card.component.html',
 })

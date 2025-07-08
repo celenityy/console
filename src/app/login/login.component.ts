@@ -9,7 +9,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AuthService } from '../auth.service';
 
 @Component({
-    selector: 'app-login',
+    selector: 'acc-login',
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss',
     imports: [MatProgressSpinnerModule],

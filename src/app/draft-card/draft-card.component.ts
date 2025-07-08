@@ -9,7 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { Draft, DraftStatus } from '../draft';
 
 @Component({
-    selector: 'app-draft-card',
+    selector: 'acc-draft-card',
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './draft-card.component.html',
 })

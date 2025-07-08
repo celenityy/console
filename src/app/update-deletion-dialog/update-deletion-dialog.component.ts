@@ -9,7 +9,7 @@ import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Update } from '../update';
 
 @Component({
-    selector: 'app-update-deletion-dialog',
+    selector: 'acc-update-deletion-dialog',
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './update-deletion-dialog.component.html',
     styleUrl: './update-deletion-dialog.component.scss'
