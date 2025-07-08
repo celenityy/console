@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { ErrorHandler, Injectable, NgZone } from '@angular/core';
+import { ErrorHandler, Injectable, NgZone, inject } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -12,7 +12,8 @@ import { isApiError } from './api-error';
     providedIn: 'root',
 })
 export class GlobalErrorHandler implements ErrorHandler {
-    constructor(private snackbar: MatSnackBar, private zone: NgZone) {}
+    private snackbar = inject(MatSnackBar);
+    private zone = inject(NgZone);
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     handleError(error: any): void {

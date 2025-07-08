@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpParams, HttpStatusCode } from '@angular/common/http';
 
 import { Observable, catchError, map, of, tap, throwError } from 'rxjs';
@@ -14,13 +14,13 @@ import { environment } from '../environments/environment';
     providedIn: 'root'
 })
 export class AuthService {
+    private http = inject(HttpClient);
+
     private readonly callbackUrl = `${environment.developerApiUrl}/auth/github/callback2`;
     private readonly sessionUrl = `${environment.developerApiUrl}/api/v1/session`;
     private readonly loggedInStorageKey = 'loggedIn';
     private readonly reviewerStorageKey = 'reviewer';
     private readonly publisherStorageKey = 'publisher';
-
-    constructor(private http: HttpClient) {}
 
     get loggedIn(): boolean {
         return localStorage.getItem(this.loggedInStorageKey) === 'true';

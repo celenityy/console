@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -58,6 +58,13 @@ import {
     styleUrl: './app-details-screen.component.scss',
 })
 export class AppDetailsScreenComponent implements OnInit {
+    private activatedRoute = inject(ActivatedRoute);
+    private appService = inject(AppService);
+    private dialog = inject(MatDialog);
+    private editService = inject(EditService);
+    private router = inject(Router);
+    private updateService = inject(UpdateService);
+
     app?: App;
     updates: Update[] = [];
     edits: Edit[] = [];
@@ -68,15 +75,6 @@ export class AppDetailsScreenComponent implements OnInit {
     showRejectedUpdates = false;
     showPublishedUpdates = false;
     submitDisabled = false;
-
-    constructor(
-        private activatedRoute: ActivatedRoute,
-        private appService: AppService,
-        private dialog: MatDialog,
-        private editService: EditService,
-        private router: Router,
-        private updateService: UpdateService,
-    ) {}
 
     ngOnInit(): void {
         this.activatedRoute.paramMap.subscribe(params => {

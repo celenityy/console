@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 import { AuthService } from '../auth.service';
@@ -27,7 +27,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     ],
 })
 export class ConsoleLayoutComponent {
-    constructor(private authService: AuthService, private router: Router) {}
+    private authService = inject(AuthService);
+    private router = inject(Router);
 
     get reviewer(): boolean {
         return this.authService.reviewer;

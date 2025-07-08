@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, output } from '@angular/core';
+import { Component, output, inject } from '@angular/core';
 import { FormArray, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -28,6 +28,8 @@ import { Review, ReviewResult } from '../review';
     styleUrl: './review-editor.component.scss'
 })
 export class ReviewEditorComponent {
+    private fb = inject(NonNullableFormBuilder);
+
     readonly formSubmit = output<Review>();
 
     reviewResultEnum = ReviewResult;
@@ -37,8 +39,6 @@ export class ReviewEditorComponent {
         reasons: this.fb.array([this.fb.control('', Validators.required)], Validators.required),
         additional_notes: [''],
     });
-
-    constructor(private fb: NonNullableFormBuilder) {}
 
     get reasons(): FormArray {
         return this.form.controls['reasons'] as FormArray;

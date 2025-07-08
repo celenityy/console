@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -22,14 +22,12 @@ import { NewDraftForm } from '../new-draft-form';
     templateUrl: './new-draft-screen.component.html',
 })
 export class NewDraftScreenComponent {
+    private dialog = inject(MatDialog);
+    private draftService = inject(DraftService);
+    private router = inject(Router);
+
     uploadProgress?: number = undefined;
     submitDisabled = false;
-
-    constructor(
-        private dialog: MatDialog,
-        private draftService: DraftService,
-        private router: Router,
-    ) {}
 
     createDraft(form: NewDraftForm): void {
         this.submitDisabled = true;

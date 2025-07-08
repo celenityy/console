@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
@@ -15,13 +15,11 @@ import { AuthService } from '../auth.service';
     imports: [MatProgressSpinnerModule],
 })
 export class LoginComponent implements OnInit {
-    loading = true;
+    private authService = inject(AuthService);
+    private activatedRoute = inject(ActivatedRoute);
+    private router = inject(Router);
 
-    constructor(
-        private authService: AuthService,
-        private activatedRoute: ActivatedRoute,
-        private router: Router,
-    ) {}
+    loading = true;
 
     ngOnInit(): void {
         this.activatedRoute.queryParams.subscribe(params => {

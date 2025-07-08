@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, inject } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -16,14 +16,14 @@ import { NewUpdateForm } from '../new-update-form';
     styleUrl: './new-update-editor.component.scss'
 })
 export class NewUpdateEditorComponent {
+    private fb = inject(NonNullableFormBuilder);
+
     readonly submitDisabled = input(false);
     readonly formSubmit = output<NewUpdateForm>();
 
     form = this.fb.group({
         apkSet: ['', Validators.required],
     });
-
-    constructor(private fb: NonNullableFormBuilder) {}
 
     emitForm(): void {
         const apkSet = (<HTMLInputElement>document.getElementById('apkset')).files?.[0];

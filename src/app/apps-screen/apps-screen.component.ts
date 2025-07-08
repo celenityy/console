@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
@@ -32,14 +32,12 @@ import { DraftService } from '../draft.service';
     styleUrl: './apps-screen.component.scss',
 })
 export class AppsScreenComponent implements OnInit {
+    private appService = inject(AppService);
+    private draftService = inject(DraftService);
+    private dialog = inject(MatDialog);
+
     apps: App[] = [];
     drafts: Draft[] = [];
-
-    constructor(
-        private appService: AppService,
-        private draftService: DraftService,
-        private dialog: MatDialog,
-    ) {}
 
     ngOnInit(): void {
         this.appService.getApps().subscribe(apps => this.apps = apps);

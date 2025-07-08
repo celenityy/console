@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpEvent, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -14,10 +14,10 @@ import { environment } from '../environments/environment';
     providedIn: 'root'
 })
 export class EditService {
+    private http = inject(HttpClient);
+
     private readonly appsUrl = `${environment.developerApiUrl}/api/v1/apps`;
     private readonly editsUrl = `${environment.developerApiUrl}/api/v1/edits`;
-
-    constructor(private http: HttpClient) {}
 
     createEdit(appId: string, edit: NewEditForm): Observable<HttpEvent<Edit>> {
         const formData = new FormData();

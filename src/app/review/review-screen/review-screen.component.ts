@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 import { Draft } from '../../draft';
@@ -30,16 +30,14 @@ import { UpdateService } from '../update.service';
     styleUrl: './review-screen.component.scss',
 })
 export class ReviewScreenComponent implements OnInit {
+    private dialog = inject(MatDialog);
+    private draftService = inject(DraftService);
+    private editService = inject(EditService);
+    private updateService = inject(UpdateService);
+
     drafts: Draft[] = [];
     edits: Edit[] = [];
     updates: Update[] = [];
-
-    constructor(
-        private dialog: MatDialog,
-        private draftService: DraftService,
-        private editService: EditService,
-        private updateService: UpdateService,
-    ) {}
 
     ngOnInit(): void {
         this.draftService.getAssigned().subscribe(drafts => this.drafts = drafts);

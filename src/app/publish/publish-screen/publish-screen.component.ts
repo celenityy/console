@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { AppService } from '../app.service';
 import { Draft } from '../../draft';
@@ -18,9 +18,10 @@ import {
     styleUrl: './publish-screen.component.scss'
 })
 export class PublishScreenComponent implements OnInit {
-    drafts: Draft[] = [];
+    private appService = inject(AppService);
+    private draftService = inject(DraftService);
 
-    constructor(private appService: AppService, private draftService: DraftService) {}
+    drafts: Draft[] = [];
 
     ngOnInit(): void {
         this.draftService.getApproved().subscribe(drafts => this.drafts = drafts);

@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, Inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
@@ -15,5 +15,5 @@ import { Draft } from '../draft';
     styleUrl: './draft-deletion-dialog.component.scss'
 })
 export class DraftDeletionDialogComponent {
-    constructor(@Inject(MAT_DIALOG_DATA) public data: Draft) {}
+    data = inject<Draft>(MAT_DIALOG_DATA);
 }

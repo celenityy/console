@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpEvent, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -14,9 +14,9 @@ import { environment } from '../environments/environment';
     providedIn: 'root'
 })
 export class DraftService {
-    private readonly draftsUrl = `${environment.developerApiUrl}/api/v1/drafts`;
+    private http = inject(HttpClient);
 
-    constructor(private http: HttpClient) {}
+    private readonly draftsUrl = `${environment.developerApiUrl}/api/v1/drafts`;
 
     createDraft(form: NewDraftForm): Observable<HttpEvent<Draft>> {
         const formData = new FormData();

@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { App } from './app';
@@ -13,9 +13,9 @@ import { environment } from '../environments/environment';
     providedIn: 'root'
 })
 export class AppService {
-    private readonly appsUrl = `${environment.developerApiUrl}/api/v1/apps`;
+    private http = inject(HttpClient);
 
-    constructor(private http: HttpClient) {}
+    private readonly appsUrl = `${environment.developerApiUrl}/api/v1/apps`;
 
     getApp(id: string): Observable<App> {
         return this.http.get<App>(`${this.appsUrl}/${id}`);

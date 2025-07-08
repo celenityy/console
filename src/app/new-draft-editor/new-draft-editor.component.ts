@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, inject } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -24,6 +24,8 @@ import { NewDraftForm } from '../new-draft-form';
     styleUrl: './new-draft-editor.component.scss',
 })
 export class NewDraftEditorComponent {
+    private fb = inject(NonNullableFormBuilder);
+
     readonly submitDisabled = input(false);
     readonly formSubmit = output<NewDraftForm>();
 
@@ -36,8 +38,6 @@ export class NewDraftEditorComponent {
             [Validators.required, Validators.minLength(3), Validators.maxLength(80)],
         ],
     });
-
-    constructor(private fb: NonNullableFormBuilder) {}
 
     labelLengthError(): boolean {
         const label = this.form.controls['label'];

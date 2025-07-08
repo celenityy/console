@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpEvent, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -14,10 +14,10 @@ import { environment } from '../environments/environment';
     providedIn: 'root'
 })
 export class UpdateService {
+    private http = inject(HttpClient);
+
     private readonly appsUrl = `${environment.developerApiUrl}/api/v1/apps`;
     private readonly updatesUrl = `${environment.developerApiUrl}/api/v1/updates`;
-
-    constructor(private http: HttpClient) {}
 
     createUpdate(appId: string, form: NewUpdateForm): Observable<HttpEvent<Update>> {
         const formData = new FormData();

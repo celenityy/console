@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, Inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
@@ -16,5 +16,5 @@ import { Update } from '../update';
     styleUrl: './update-submission-dialog.component.scss'
 })
 export class UpdateSubmissionDialogComponent {
-    constructor(@Inject(MAT_DIALOG_DATA) public data: { app: App, update: Update }) {}
+    data = inject<{ app: App; update: Update; }>(MAT_DIALOG_DATA);
 }
