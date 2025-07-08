@@ -12,5 +12,5 @@ import { RouterOutlet } from '@angular/router';
     imports: [RouterOutlet],
 })
 export class AppComponent {
-    title = 'frontend';
+    title = 'console';
 }
