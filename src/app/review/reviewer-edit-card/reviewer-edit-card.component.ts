@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
@@ -14,10 +14,10 @@ import { Edit } from '../../edit';
     templateUrl: './reviewer-edit-card.component.html',
 })
 export class ReviewerEditCardComponent {
-    @Input({ required: true }) edit!: Edit;
-    @Output() postReview = new EventEmitter<string>();
+    readonly edit = input.required<Edit>();
+    readonly postReview = output<string>();
 
     onPostReview(): void {
-        this.postReview.emit(this.edit.id);
+        this.postReview.emit(this.edit().id);
     }
 }

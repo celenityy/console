@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { FormArray, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -28,7 +28,7 @@ import { Review, ReviewResult } from '../review';
     styleUrl: './review-editor.component.scss'
 })
 export class ReviewEditorComponent {
-    @Output() formSubmit = new EventEmitter<Review>();
+    readonly formSubmit = output<Review>();
 
     reviewResultEnum = ReviewResult;
 

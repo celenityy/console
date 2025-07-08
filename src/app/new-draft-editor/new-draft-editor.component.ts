@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -24,8 +24,8 @@ import { NewDraftForm } from '../new-draft-form';
     styleUrl: './new-draft-editor.component.scss',
 })
 export class NewDraftEditorComponent {
-    @Input() submitDisabled = false;
-    @Output() formSubmit = new EventEmitter<NewDraftForm>();
+    readonly submitDisabled = input(false);
+    readonly formSubmit = output<NewDraftForm>();
 
     form = this.fb.group({
         apkSet: ['', Validators.required],

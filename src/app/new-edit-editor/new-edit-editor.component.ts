@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -25,7 +25,7 @@ import { NewEditForm } from '../new-edit-form';
     styleUrls: ['./new-edit-editor.component.scss']
 })
 export class NewEditEditorComponent {
-    @Output() formSubmit = new EventEmitter<NewEditForm>();
+    readonly formSubmit = output<NewEditForm>();
 
     form = this.fb.group({
         shortDescription: ['', [Validators.minLength(3), Validators.maxLength(80)]],

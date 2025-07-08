@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
@@ -14,22 +14,24 @@ import { Edit, EditStatus } from '../edit';
     templateUrl: './edit-card.component.html',
 })
 export class EditCardComponent {
-    @Input({ required: true }) edit!: Edit;
-    @Output() delete = new EventEmitter<string>();
-    @Output() submitForReview = new EventEmitter<string>();
+    readonly edit = input.required<Edit>();
+    readonly delete = output<string>();
+    readonly submitForReview = output<string>();
 
     editStatusEnum = EditStatus;
 
     canDelete(): boolean {
-        return this.edit.status === EditStatus.Unsubmitted ||
-            this.edit.status === EditStatus.Submitted;
+        const edit = this.edit();
+
+        return edit.status === EditStatus.Unsubmitted ||
+            edit.status === EditStatus.Submitted;
     }
 
     onDelete(): void {
-        this.delete.emit(this.edit.id);
+        this.delete.emit(this.edit().id);
     }
 
     onSubmitForReview(): void {
-        this.submitForReview.emit(this.edit.id);
+        this.submitForReview.emit(this.edit().id);
     }
 }

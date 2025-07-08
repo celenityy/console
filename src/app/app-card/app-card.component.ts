@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
@@ -15,5 +15,5 @@ import { App } from '../app';
     templateUrl: './app-card.component.html',
 })
 export class AppCardComponent {
-    @Input({ required: true }) app!: App;
+    readonly app = input.required<App>();
 }
