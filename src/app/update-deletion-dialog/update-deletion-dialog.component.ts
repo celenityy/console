@@ -10,7 +10,6 @@ import { Update } from '../update';
 
 @Component({
     selector: 'app-update-deletion-dialog',
-    standalone: true,
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './update-deletion-dialog.component.html',
     styleUrl: './update-deletion-dialog.component.scss'

@@ -11,7 +11,6 @@ import { NewUpdateForm } from '../new-update-form';
 
 @Component({
     selector: 'app-new-update-editor',
-    standalone: true,
     imports: [MatButtonModule, MatCardModule, ReactiveFormsModule],
     templateUrl: './new-update-editor.component.html',
     styleUrl: './new-update-editor.component.scss'

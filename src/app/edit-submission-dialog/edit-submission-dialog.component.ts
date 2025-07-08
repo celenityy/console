@@ -11,7 +11,6 @@ import { Edit } from '../edit';
 
 @Component({
     selector: 'app-edit-submission-dialog',
-    standalone: true,
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './edit-submission-dialog.component.html',
     styleUrl: './edit-submission-dialog.component.scss'

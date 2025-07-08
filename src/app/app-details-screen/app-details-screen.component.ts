@@ -40,7 +40,6 @@ import {
 
 @Component({
     selector: 'app-app-details-screen',
-    standalone: true,
     imports: [
         EditCardComponent,
         EditFilterPipe,

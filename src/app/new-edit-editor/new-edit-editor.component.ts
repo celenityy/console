@@ -14,7 +14,6 @@ import { NewEditForm } from '../new-edit-form';
 
 @Component({
     selector: 'app-new-edit-editor',
-    standalone: true,
     imports: [
         MatButtonModule,
         MatCardModule,

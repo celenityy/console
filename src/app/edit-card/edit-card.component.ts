@@ -10,7 +10,6 @@ import { Edit, EditStatus } from '../edit';
 
 @Component({
     selector: 'app-edit-card',
-    standalone: true,
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './edit-card.component.html',
 })

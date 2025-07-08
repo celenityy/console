@@ -13,7 +13,6 @@ import { NewDraftForm } from '../new-draft-form';
 
 @Component({
     selector: 'app-new-draft-editor',
-    standalone: true,
     imports: [
         MatButtonModule,
         MatCardModule,

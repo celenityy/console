@@ -10,7 +10,6 @@ import { Edit } from '../edit';
 
 @Component({
     selector: 'app-edit-deletion-dialog',
-    standalone: true,
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './edit-deletion-dialog.component.html',
     styleUrl: './edit-deletion-dialog.component.scss'

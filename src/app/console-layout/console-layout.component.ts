@@ -16,7 +16,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     selector: 'app-console-layout',
     templateUrl: './console-layout.component.html',
     styleUrl: './console-layout.component.scss',
-    standalone: true,
     imports: [
         MatButtonModule,
         MatIconModule,

@@ -18,7 +18,6 @@ import { NewDraftForm } from '../new-draft-form';
 
 @Component({
     selector: 'app-new-draft-screen',
-    standalone: true,
     imports: [MatDialogModule, MatProgressBarModule, NewDraftEditorComponent],
     templateUrl: './new-draft-screen.component.html',
 })

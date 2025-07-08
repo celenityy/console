@@ -11,7 +11,6 @@ import { App } from '../app';
 
 @Component({
     selector: 'app-app-card',
-    standalone: true,
     imports: [MatButtonModule, MatCardModule, RouterLink],
     templateUrl: './app-card.component.html',
 })

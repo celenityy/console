@@ -10,7 +10,6 @@ import { Draft } from '../draft';
 
 @Component({
     selector: 'app-draft-submission-dialog',
-    standalone: true,
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './draft-submission-dialog.component.html',
     styleUrl: './draft-submission-dialog.component.scss'

@@ -15,7 +15,6 @@ import { Review, ReviewResult } from '../review';
 
 @Component({
     selector: 'app-review-editor',
-    standalone: true,
     imports: [
         MatButtonModule,
         MatCardModule,

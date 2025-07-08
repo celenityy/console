@@ -11,7 +11,6 @@ import { ReviewEditorComponent } from '../review-editor/review-editor.component'
 
 @Component({
     selector: 'app-review-dialog',
-    standalone: true,
     imports: [MatButtonModule, MatDialogModule, ReviewEditorComponent],
     templateUrl: './review-dialog.component.html',
 })

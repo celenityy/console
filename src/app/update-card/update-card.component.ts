@@ -10,7 +10,6 @@ import { Update, UpdateStatus } from '../update';
 
 @Component({
     selector: 'app-update-card',
-    standalone: true,
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './update-card.component.html',
 })

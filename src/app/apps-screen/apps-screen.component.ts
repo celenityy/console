@@ -20,7 +20,6 @@ import { DraftService } from '../draft.service';
 
 @Component({
     selector: 'app-apps-screen',
-    standalone: true,
     imports: [
         AppCardComponent,
         DraftCardComponent,

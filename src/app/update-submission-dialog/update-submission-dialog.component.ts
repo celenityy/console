@@ -11,7 +11,6 @@ import { Update } from '../update';
 
 @Component({
     selector: 'app-update-submission-dialog',
-    standalone: true,
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './update-submission-dialog.component.html',
     styleUrl: './update-submission-dialog.component.scss'

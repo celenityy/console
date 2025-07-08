@@ -11,7 +11,6 @@ import { environment } from '../../environments/environment';
     selector: 'app-login-screen',
     templateUrl: './login-screen.component.html',
     styleUrl: './login-screen.component.scss',
-    standalone: true,
     imports: [MatButtonModule],
 })
 export class LoginScreenComponent {

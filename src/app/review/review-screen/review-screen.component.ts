@@ -20,7 +20,6 @@ import { UpdateService } from '../update.service';
 
 @Component({
     selector: 'app-review-screen',
-    standalone: true,
     imports: [
         MatDialogModule,
         ReviewerDraftCardComponent,

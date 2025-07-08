@@ -11,7 +11,6 @@ import { environment } from '../../../environments/environment';
 
 @Component({
     selector: 'app-publisher-draft-card',
-    standalone: true,
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './publisher-draft-card.component.html',
 })

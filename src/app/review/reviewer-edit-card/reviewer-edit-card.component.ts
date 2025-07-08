@@ -10,7 +10,6 @@ import { Edit } from '../../edit';
 
 @Component({
     selector: 'app-reviewer-edit-card',
-    standalone: true,
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './reviewer-edit-card.component.html',
 })

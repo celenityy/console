@@ -13,7 +13,6 @@ import { AuthService } from '../auth.service';
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss',
     imports: [MatProgressSpinnerModule],
-    standalone: true,
 })
 export class LoginComponent implements OnInit {
     loading = true;

@@ -10,7 +10,6 @@ import { Draft, DraftStatus } from '../draft';
 
 @Component({
     selector: 'app-draft-card',
-    standalone: true,
     imports: [MatButtonModule, MatCardModule],
     templateUrl: './draft-card.component.html',
 })

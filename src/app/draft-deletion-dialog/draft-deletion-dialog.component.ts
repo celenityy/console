@@ -10,7 +10,6 @@ import { Draft } from '../draft';
 
 @Component({
     selector: 'app-draft-deletion-dialog',
-    standalone: true,
     imports: [MatButtonModule, MatDialogModule],
     templateUrl: './draft-deletion-dialog.component.html',
     styleUrl: './draft-deletion-dialog.component.scss'

@@ -13,7 +13,6 @@ import {
 
 @Component({
     selector: 'app-publish-screen',
-    standalone: true,
     imports: [PublisherDraftCardComponent],
     templateUrl: './publish-screen.component.html',
     styleUrl: './publish-screen.component.scss'
