@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { unauthorizedInterceptor } from './unauthorized.interceptor';
@@ -13,5 +13,6 @@ export const appConfig: ApplicationConfig = {
     providers: [
         importProvidersFrom(AppRoutingModule),
         provideHttpClient(withInterceptors([unauthorizedInterceptor, withCredentialsInterceptor])),
+        provideZoneChangeDetection({ eventCoalescing: true }),
     ],
 };
