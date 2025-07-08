@@ -8,7 +8,6 @@ import { RouterOutlet } from '@angular/router';
 @Component({
     selector: 'acc-root',
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
     imports: [RouterOutlet],
 })
 export class AppComponent {
