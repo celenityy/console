@@ -2,12 +2,16 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-only
 
+permissions: {}
+
 name: Check licensing
 
 on: [push, pull_request]
 
 jobs:
   license-check:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
