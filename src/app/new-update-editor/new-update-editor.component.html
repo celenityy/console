@@ -24,8 +24,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 
             <button
                 type="button"
-                mat-flat-button
-                color="primary"
+                matButton="filled"
                 (click)="apksetinput.click()"
                 class="btn">
                 Select
@@ -38,8 +37,7 @@ SPDX-License-Identifier: AGPL-3.0-only
             <button
                 type="submit"
                 [disabled]="form.invalid || submitDisabled()"
-                mat-flat-button
-                color="primary">
+                matButton="filled">
                 Upload
             </button>
         </mat-card-actions>

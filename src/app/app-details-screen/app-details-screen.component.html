@@ -41,14 +41,12 @@ SPDX-License-Identifier: AGPL-3.0-only
 <mat-chip-listbox multiple>
     <mat-chip-option
         [selected]="showRejectedUpdates"
-        (selectionChange)="showRejectedUpdates = $event.selected"
-        color="accent">
+        (selectionChange)="showRejectedUpdates = $event.selected">
         Rejected
     </mat-chip-option>
     <mat-chip-option
         [selected]="showPublishedUpdates"
-        (selectionChange)="showPublishedUpdates = $event.selected"
-        color="accent">
+        (selectionChange)="showPublishedUpdates = $event.selected">
         Published
     </mat-chip-option>
 </mat-chip-listbox>
@@ -69,14 +67,12 @@ SPDX-License-Identifier: AGPL-3.0-only
 <mat-chip-listbox multiple>
     <mat-chip-option
         [selected]="showRejectedEdits"
-        (selectionChange)="showRejectedEdits = $event.selected"
-        color="accent">
+        (selectionChange)="showRejectedEdits = $event.selected">
         Rejected
     </mat-chip-option>
     <mat-chip-option
         [selected]="showPublishedEdits"
-        (selectionChange)="showPublishedEdits = $event.selected"
-        color="accent">
+        (selectionChange)="showPublishedEdits = $event.selected">
         Published
     </mat-chip-option>
 </mat-chip-listbox>

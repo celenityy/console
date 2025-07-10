@@ -21,13 +21,12 @@ SPDX-License-Identifier: AGPL-3.0-only
     </mat-card-content>
     <mat-card-actions align="end">
         @if (canDelete()) {
-            <button (click)="onDelete()" mat-button color="warn">Delete</button>
+            <button (click)="onDelete()" matButton>Delete</button>
         }
         <button
             (click)="onSubmitForReview()"
             [disabled]="edit().status !== editStatusEnum.Unsubmitted"
-            mat-flat-button
-            color="primary">
+            matButton="filled">
             Submit
         </button>
     </mat-card-actions>
